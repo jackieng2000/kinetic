@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Kinetic</title>
+    <title>流動教室KineticTraining</title>
     <link rel="icon" href="image/logo1.png" type="image/x-icon"> <!-- 添加 favicon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #0b8a79;
+            background-image: url('image/contactLogo.png'); /* Background image for the specified div */
+            background-size: cover;
+            background-position: center;
+            height: 700px; /* Set the height as needed */
         }
+
 
         .navbar {
             background-color: #ffffff;
@@ -77,6 +81,54 @@
             bottom: 0;
         }
 
+        .dropdown:hover .dropdown-menu {
+            display: block; /* Show dropdown menu on hover */
+        }
+
+        .dropdown-menu {
+            display: none; /* Hide dropdown menu by default */
+            position: absolute; /* Position it absolutely */
+            background-color: white; /* Background color for dropdown */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            z-index: 1000; /* Ensure it is on top */
+        }
+
+        .whatsapp-logo,
+        .social-icons img {
+            transition: transform 0.3s ease; /* Smooth transition for all logos */
+        }
+
+        .whatsapp-logo:hover,
+        .social-icons img:hover {
+            transform: scale(1.1) rotateY(10deg); /* 3D effect on hover */
+        }
+
+        .whatsapp-logo {
+            position: fixed; /* Make it fixed */
+            bottom: 20px; /* Position from the bottom */
+            right: 20px; /* Position from the right */
+            width: 60px; /* Size of the logo */
+            height: 60px; /* Size of the logo */
+            z-index: 1000; /* Keep it on top of other elements */
+        }
+
+        .social-icons {
+            display: flex; /* Align items in a row */
+            align-items: center; /* Center vertically */
+            margin-left: auto; /* Push to the right */
+        }
+
+        .social-logo {
+            width: 30px; /* Size of the logos */
+            height: auto; /* Maintain aspect ratio */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            margin-left: 10px; /* Space between icons */
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1) rotateY(10deg); /* 3D effect on hover */
+        }
+
         footer {
             padding: 20px 0;
             background-color: #ffffff; 
@@ -112,6 +164,7 @@
             color: white;
         }
 
+        
         @media (max-width: 76px) {
             .navbar-nav {
                 display: none;
@@ -136,7 +189,7 @@
                 </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav">
+                <div class="navbar-nav ml-auto"> <!-- Add ml-auto here -->
                     <a class="nav-item nav-link" href="index.html">首頁</a>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -154,10 +207,23 @@
                     <a class="nav-item nav-link" href="#">過往活動</a>
                     <a class="nav-item nav-link" href="#">Blog</a>
                     <a class="nav-item nav-link" href="contact.html">聯絡我們</a>
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/kinetic_radio" target="_blank" class="nav-item nav-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="social-logo">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61569644221657&mibextid=ZbWKwL" target="_blank" class="nav-item nav-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="social-logo">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <div class="background-image">
+
+    </div>
 
     <div class="container my-5">
         <h1 class="text-center text-white">聯絡我們</h1>
@@ -184,12 +250,16 @@
         </div>
     </div>
 
+    <a href="https://wa.me/+85293793473" class="whatsapp-logo" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    </a>
+
     <footer>
         <div class="contact">
             電郵:kinetictra@gmail.com<br>
-            電話:+852 6139 2886
+            電話:+852 9379 3473
         </div>
-        <p>&copy; 2022 by KineticTraining</p>
+        <p>&copy; 2025 by KineticTraining</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

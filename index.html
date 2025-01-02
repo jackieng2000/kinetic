@@ -76,6 +76,18 @@
             bottom: 0;
         }
 
+        .dropdown:hover .dropdown-menu {
+            display: block; /* Show dropdown menu on hover */
+        }
+
+        .dropdown-menu {
+            display: none; /* Hide dropdown menu by default */
+            position: absolute; /* Position it absolutely */
+            background-color: white; /* Background color for dropdown */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            z-index: 1000; /* Ensure it is on top */
+        }
+
         footer {
             padding: 20px 0;
             background-color: #ffffff; 
@@ -175,18 +187,90 @@
         }
 
         .service-item.positive-thinking {
-            background-image: url('image/positive-thinking.jpg'); /* Replace with your image path */
-            background-size: cover; /* Cover the entire area */
-            background-position: center; /* Center the image */
-            color: white; /* Change text color for contrast */
-            padding: 80px; /* Maintain padding */
-            border-radius: 8px; /* Keep rounded corners */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+            position: relative; /* 使伪元素定位相对于此元素 */
+            color: white; /* 文本颜色 */
+            padding: 80px; /* 内边距 */
+            border-radius: 8px; /* 圆角 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+        }
+
+        .service-item.positive-thinking::before {
+            content: ''; /* 必须添加内容 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 顶部对齐 */
+            left: 0; /* 左侧对齐 */
+            right: 0; /* 右侧对齐 */
+            bottom: 0; /* 底部对齐 */
+            background-image: url('image/positive-thinking.jpg'); /* 背景图片 */
+            background-size: cover; /* 覆盖整个区域 */
+            background-position: center; /* 中心对齐 */
+            opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
+            z-index: 0; /* 确保在文本后面 */
         }
 
         .service-item.positive-thinking h4,
         .service-item.positive-thinking p {
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+            position: relative; /* 确保文本在伪元素上方 */
+            z-index: 1; /* 确保文本在伪元素上方 */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 文本阴影，增强可读性 */
+        }
+
+        .service-item.special-learning {
+            position: relative; /* 使伪元素定位相对于此元素 */
+            color: white; /* 文本颜色 */
+            padding: 80px; /* 内边距 */
+            border-radius: 8px; /* 圆角 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+        }
+
+        .service-item.special-learning::before {
+            content: ''; /* 必须添加内容 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 顶部对齐 */
+            left: 0; /* 左侧对齐 */
+            right: 0; /* 右侧对齐 */
+            bottom: 0; /* 底部对齐 */
+            background-image: url('image/special-learning.jpg'); /* 背景图片 */
+            background-size: cover; /* 覆盖整个区域 */
+            background-position: center; /* 中心对齐 */
+            opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
+            z-index: 0; /* 确保在文本后面 */
+        }
+
+        .service-item.special-learning h4,
+        .service-item.special-learning p {
+            position: relative; /* 确保文本在伪元素上方 */
+            z-index: 1; /* 确保文本在伪元素上方 */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 文本阴影，增强可读性 */
+        }
+
+        .service-item.person-development {
+            position: relative; /* 使伪元素定位相对于此元素 */
+            color: white; /* 文本颜色 */
+            padding: 80px; /* 内边距 */
+            border-radius: 8px; /* 圆角 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+        }
+
+        .service-item.person-development::before {
+            content: ''; /* 必须添加内容 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 顶部对齐 */
+            left: 0; /* 左侧对齐 */
+            right: 0; /* 右侧对齐 */
+            bottom: 0; /* 底部对齐 */
+            background-image: url('image/person-development.jpg'); /* 背景图片 */
+            background-size: cover; /* 覆盖整个区域 */
+            background-position: center; /* 中心对齐 */
+            opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
+            z-index: 0; /* 确保在文本后面 */
+        }
+
+        .service-item.person-development h4,
+        .service-item.person-development p {
+            position: relative; /* 确保文本在伪元素上方 */
+            z-index: 1; /* 确保文本在伪元素上方 */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 文本阴影，增强可读性 */
         }
 
         .service-item {
@@ -197,6 +281,12 @@
             margin-bottom: 50px;
             text-align: center;
             font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        .service-item:hover {
+            transform: translateY(-2px) scale(1); /* Move up and scale slightly */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8); /* Increase shadow on hover */
         }
 
         .service-item h4 {
@@ -217,6 +307,43 @@
                 display: block;
             }
         }
+
+        .whatsapp-logo,
+        .social-icons img {
+            transition: transform 0.3s ease; /* Smooth transition for all logos */
+        }
+
+        .whatsapp-logo:hover,
+        .social-icons img:hover {
+            transform: scale(1.1) rotateY(10deg); /* 3D effect on hover */
+        }
+
+        .whatsapp-logo {
+            position: fixed; /* Make it fixed */
+            bottom: 20px; /* Position from the bottom */
+            right: 20px; /* Position from the right */
+            width: 60px; /* Size of the logo */
+            height: 60px; /* Size of the logo */
+            z-index: 1000; /* Keep it on top of other elements */
+        }
+
+        .social-icons {
+            display: flex; /* Align items in a row */
+            align-items: center; /* Center vertically */
+            margin-left: auto; /* Push to the right */
+        }
+
+        .social-logo {
+            width: 30px; /* Size of the logos */
+            height: auto; /* Maintain aspect ratio */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            margin-left: 10px; /* Space between icons */
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1) rotateY(10deg); /* 3D effect on hover */
+        }
+
     </style>
 </head>
 <body>
@@ -233,7 +360,7 @@
                 </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav">
+                <div class="navbar-nav ml-auto"> <!-- Add ml-auto here -->
                     <a class="nav-item nav-link" href="index.html">首頁</a>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -251,6 +378,15 @@
                     <a class="nav-item nav-link" href="#">過往活動</a>
                     <a class="nav-item nav-link" href="#">Blog</a>
                     <a class="nav-item nav-link" href="contact.html">聯絡我們</a>
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/kinetic_radio" target="_blank" class="nav-item nav-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="social-logo">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61569644221657&mibextid=ZbWKwL" target="_blank" class="nav-item nav-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="social-logo">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,7 +430,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-item">
+                <div class="service-item special-learning">
                     <h4>特殊學習需要</h4>
                     <p>向特殊學習需要之學生提供支援，協助他們充份發展潛能</p>
                 </div>
@@ -306,7 +442,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-item">
+                <div class="service-item person-development">
                     <h4>全人發展</h4>
                     <p>滿足身心靈發展需要，讓青少年以至成人能夠得以持續發展，助人自助</p>
                 </div>
@@ -314,12 +450,16 @@
         </div>
     </div>
 
+    <a href="https://wa.me/+85293793473" class="whatsapp-logo" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    </a>
+
     <footer>
         <div class="contact">
             電郵:kinetictra@gmail.com<br>
-            電話:+852 6139 2886
+            電話:+852 9379 3473
         </div>
-        <p>&copy; 2022 by KineticTraining</p>
+        <p>&copy; 2025 by KineticTraining</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
