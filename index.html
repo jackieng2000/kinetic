@@ -161,8 +161,9 @@
             position: relative; /* 使伪元素定位相对于此元素 */
             color: white; /* 文本颜色 */
             padding: 80px; /* 内边距 */
-            border-radius: 8px; /* 圆角 */
+            border-radius: 16px; /* 圆角 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+            overflow: hidden;
         }
 
         .service-item.career-planning::before {
@@ -177,6 +178,7 @@
             background-position: center; /* 中心对齐 */
             opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
             z-index: 0; /* 确保在文本后面 */
+            border-radius: 16px;
         }
 
         .service-item.career-planning h4,
@@ -190,8 +192,9 @@
             position: relative; /* 使伪元素定位相对于此元素 */
             color: white; /* 文本颜色 */
             padding: 80px; /* 内边距 */
-            border-radius: 8px; /* 圆角 */
+            border-radius: 16px; /* 圆角 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+            overflow: hidden;
         }
 
         .service-item.positive-thinking::before {
@@ -206,6 +209,7 @@
             background-position: center; /* 中心对齐 */
             opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
             z-index: 0; /* 确保在文本后面 */
+            border-radius: 16px;
         }
 
         .service-item.positive-thinking h4,
@@ -219,8 +223,9 @@
             position: relative; /* 使伪元素定位相对于此元素 */
             color: white; /* 文本颜色 */
             padding: 80px; /* 内边距 */
-            border-radius: 8px; /* 圆角 */
+            border-radius: 16px; /* 圆角 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+            overflow: hidden;
         }
 
         .service-item.special-learning::before {
@@ -235,6 +240,7 @@
             background-position: center; /* 中心对齐 */
             opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
             z-index: 0; /* 确保在文本后面 */
+            border-radius: 16px;
         }
 
         .service-item.special-learning h4,
@@ -248,8 +254,9 @@
             position: relative; /* 使伪元素定位相对于此元素 */
             color: white; /* 文本颜色 */
             padding: 80px; /* 内边距 */
-            border-radius: 8px; /* 圆角 */
+            border-radius: 16px; /* 圆角 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影 */
+            overflow: hidden;
         }
 
         .service-item.person-development::before {
@@ -264,6 +271,7 @@
             background-position: center; /* 中心对齐 */
             opacity: 0.5; /* 调整透明度，范围 0 (完全透明) 到 1 (完全不透明) */
             z-index: 0; /* 确保在文本后面 */
+            border-radius: 16px;
         }
 
         .service-item.person-development h4,
@@ -343,6 +351,34 @@
         .social-logo:hover {
             transform: scale(1.1) rotateY(10deg); /* 3D effect on hover */
         }
+
+        .partner {
+            background-color: #0b8a79; /* Background color */
+            padding: 100px; /* Padding around the text */
+            text-align: center; /* Center align the text */
+        }
+
+        .partner h1 {
+            font-size: 5rem; /* Increase font size */
+            color: white; /* Text color */
+            margin: 0; /* Remove default margin */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for depth */
+        }
+
+        .partner-image {
+            display: flex; /* Optional: for centering the image */
+            justify-content: center; /* Optional: center the image horizontally */
+            padding: 20px; /* Increase space around the image */
+            background-color: #ffffff; /* Optional: background color for visibility */
+        }
+
+        .partner-image img {
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent bottom spacing issues */
+            margin: 0; /* Reset any default margin */
+        }
+
 
     </style>
 </head>
@@ -453,6 +489,14 @@
     <a href="https://wa.me/+85293793473" class="whatsapp-logo" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
     </a>
+
+    <div class="partner">
+        <h1>合作伙伴</h1>
+    </div>
+
+    <div class="partner-image">
+        <img src="image/Mechanism.avif" alt="Mechanism logo">
+    </div>
 
     <footer>
         <div class="contact">
